@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <style type="text/css">
+      body {
+        background-image: url("https://i.pinimg.com/originals/9c/e2/38/9ce23830d658b524192672071207ffa3.gif");
+      }
+      h1{
+        color:white;
+        font-family: fantasy;
+      }
+      h2{
+        color:white;
+        font-family:fantasy;
+      }
+      .animation1{
+        width: 40px;
+        height: 40px;
+        animation-duration: 4s;
+        animation-name: one;
+        background-color:gray;
+      }
+     @keyframes one {
+      from {
+          background-color: gray;
+        }
+        to {
+          background-color: green;
+        }
+     }
+    </style>
+  </head>
+  <body>
+    <h1>Solve It!</h1>
+    <form>
+      <input
+        type="text"
+        placeholder="Type your answer here..."
+        id="answer"
+        name="answer"
+      ></input>
+    </form>
+    <button class="hihi" onclick="answeris()">Submit</button>
+    <button onclick="back333()">Back</button>
+    <br></br>
+    <div class="animation1">
+      
+    </div>
+
+    <br></br>
+    <h2>Take me for a spin and i'll make you cool, 
+      but use me when its cool then you're a fool. What am I?</h2>
+    <script type="text/javascript">
+     function back333() {
+        location.replace("https://ohqy2.csb.app/ciphers.html");
+      }
+    function answeris() {
+    var input2 = document.getElementById("answer").value;
+    if (input2 === "fan") {
+      alert("You are correct!");
+      var points = 3;
+      alert("You have " + points + " points!");
+      location.replace("https://ohqy2.csb.app/index.html");
+    }else{
+      alert("You are wrong!!!")
+    }
+}</script>
+
+    <!--Type after this line!-->
+  </body>
+</html>

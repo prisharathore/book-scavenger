@@ -1,0 +1,603 @@
+<html>
+  <head>
+      <style type="text/css">
+        body {
+          background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf0OZ_F9e-hvkD-sSMZvY5Cai_-zHwq4HIyg&usqp=CAU");
+        }
+        h1{
+          color: white;
+        }
+
+        p{
+          color: white;
+        }
+
+        h2{
+          color:white;
+        }
+
+        .wordofday{
+          background-color:black;
+        color:white;
+        }
+        .wordofday:hover{
+          background-image: radial-gradient(purple, blue, green, orange, red);
+          
+        }
+
+        .button1{
+          position: -webkit-sticky;
+          position: sticky;
+          top: 0;
+          background-color:indianred;
+          margin: 10px;
+          padding: 10px;
+          margin-top: 0px;
+          float: right;
+          margin-left: 100px;
+          width:100;
+          height:50;
+          text-align:center;
+          color:bisque;
+          font-family:cursive;
+        }
+        .button2{
+          position: -webkit-sticky;
+          position:sticky;
+          top: 0px;
+          background-color: indianred;
+          margin: 10px;
+          padding: 10px;
+          float:right;
+          margin-left: 100px;
+          width:100;
+          height:50;
+          text-align:center;
+          color:bisque;
+          font-family:cursive;
+        }
+        .settings{
+          position:-webkit-sticky;
+          position:sticky;
+          padding:5px;
+          margin:50px;
+          height:75px;
+          width:77px;
+          float:right;
+          background-color: gray;
+          margin-left:0px;
+
+
+        }
+        .button2:hover{
+          background-color:salmon;
+        }
+        .button1:hover{
+          background-color:salmon;
+        }
+        .button7{
+          position:-webkit-sticky;
+          position:sticky;
+          top:0px;
+          padding:5px;
+          margin:5px;
+          height:75px;
+          width:75px;
+          background-color:whitesmoke;
+          float:left;
+        }
+        .notifbell{
+        position:-webkit-sticky;
+        position:sticky;
+        top:0px;
+         padding:5px;
+         margin:5px;
+         height:75px;
+         width:75px;
+         border-width:3px;
+         float:left;
+         
+        }
+        .signup{
+          position:-webkit-sticky;
+          position:sticky;
+          top:0px;
+          float:left;
+          background-color:indianred;
+          font-family:cursive;
+          color:white;
+        }
+        .signup:hover{
+          background-color:salmon;
+        }
+        img {
+          margin-right: 50px;
+          opacity: 1;
+          float:left;
+        }
+        img:hover {
+          opacity: 0.8;
+        }
+        /* Style The Dropdown Button */
+       .dropbtn {
+          background-color:indianred;
+          font-family:cursive;
+          color: white;
+          padding: 16px;
+          margin:10px;
+          font-size: 16px;
+          border-width:3px;
+          float:right;
+          margin-left:100px;
+          right:100;
+          cursor: pointer;
+          width:100;
+          height:50;
+       }
+
+        /* The container <div> - needed to position the dropdown content */
+       .dropdown {
+        
+        position: -webkit-sticky;
+          position:sticky;
+          top: 0px;
+          display:inline-block;
+      }
+
+       /* Dropdown Content (Hidden by Default) */
+       .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: salmon;
+}
+.Word{
+  color:deeppink;
+}
+.Book{
+  color:deeppink;
+}
+#username{
+        color: burlywood;
+}
+.header {
+  background-image: linear-gradient(
+    to right,
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          purple
+          
+        );
+        margin-top: 15px;
+        padding:7px
+}
+
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+.open-button:hover{
+  background-image:linear-gradient(to right, grey, black, grey);
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .btn:hover{
+  background-image:linear-gradient(to right, green, yellowgreen, green);
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red
+}
+.form-container .cancel:hover{
+  background-image:linear-gradient(to right, red, orange, red);
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+  
+}
+.reload{
+  float:right;
+}
+#settings1{
+  display:none;
+  background-color:white;
+  width:300px;
+  height:300px;
+  float:right;
+}
+#settings123{
+  background-color: red;
+  font-family: 'Courier New', Courier, monospace;
+}
+#turnmusic{
+  background-color:green;
+  width: 50px;
+  height:50px;
+}
+#file1{
+  display:none;
+  background-color:white;
+}
+#happy{
+  width:107px;
+  background-color: whitesmoke;
+}
+  
+
+#smilingavatar{
+  height:100px;
+  width:100px;
+  background-color: white;
+}
+#funnyavatar{
+  height:100px;
+  width:100px;
+  background-color: white;
+}
+#laavatar{
+  height:100px;
+  width:100px;
+  background-color: white;
+}
+#sadavatar{
+  height:100px;
+  width:100px;
+  background-color: white;
+}
+#angryavatar{
+  height:100px;
+  width:100px;
+  background-color: white; 
+}
+#skepavatar{
+  height:100px;
+  width:100px;
+  background-color: white;
+}
+#ha{
+  background-color:green;
+  width: 65px;
+  height:50px;
+}
+#encybrown{
+  height:100px;
+  width:100px;
+  background-color: white;
+}
+.dropbtn2 {
+          font-family:cursive;
+          padding: 16px;
+          margin:10px;
+          font-size: 16px;
+          float:right;
+          margin-left:150px;
+    
+          right:50;
+          cursor: pointer;
+          width: 60px;
+          height:60px;
+    
+
+
+       }
+       .dropdown2 {
+        
+        position: -webkit-sticky;
+          position:sticky;
+          top: 0px;
+          display:inline-block;
+      }
+
+  .dropdown-content2 {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
+
+/* Links inside the dropdown */
+.dropdown-content2 a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content2 a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown2:hover .dropdown-content2 {
+  display: block;
+}
+
+
+
+
+      </style>
+  </head>
+  <!--In the script tag is where the JavaScript is.-->
+  <body>
+    
+
+      <button class="open-button" onclick="openForm()">Sign In!</button>
+
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Login</h1>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="emaila" required>
+      
+          <label for="username"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="username" id="user" required>
+          
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="button" class="btn" onclick="savename()">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div> 
+    <script type="text/javascript">
+      function myFunction() {
+        location.replace("https://ohqy2.csb.app/chat.html")
+  }
+      function Bell() {
+        location.replace("https://ohqy2.csb.app/bell.html")
+  }
+      function forums() {
+        location.replace("https://ohqy2.csb.app/forums.html")
+  }
+      function signups() {
+        location.replace("https://ohqy2.csb.app/signup.html")
+  }
+      function ciphers() {
+        location.replace("https://ohqy2.csb.app/ciphers.html")
+  }
+      function wordofday() {
+        location.replace("https://ohqy2.csb.app/wordoftheweek.html");
+  }
+      function openForm() {
+      document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+function savename() {
+    var input = document.getElementById("user").value;
+    document.getElementById("use").innerHTML= input;
+}
+function settings() {
+  document.getElementById("settings1").style.display = "block";
+}
+function closet() {
+  document.getElementById("settings1").style.display = "none";
+}
+function fileopen() {
+  document.getElementById("file1").style.display = "block";
+}
+function fileclose() {
+  document.getElementById("file1").style.display = "none";
+}
+function turnmusic() {
+  var x = document.getElementById("turnmusic");
+  if (x.style.background === "green") {
+    x.style.background = "red";
+  } else {
+    x.style.background = "green";
+  }
+}
+
+
+
+  function ha() {
+  var u = document.getElementById("ha");
+  if (u.style.background === "green") {
+    u.style.background = "red";
+  } else {
+    u.style.background = "green";
+  }
+}
+ 
+
+
+function smilingavatar() {
+  document.getElementById("profilepic").src = "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/smiling-face-with-open-mouth.png";
+}
+function funnyavatar() {
+  document.getElementById("profilepic").src = "https://d2um6umu4gwssp.cloudfront.net/blog/wp-content/uploads/2017/09/apple_emoji.png";
+}
+function laavatar() {
+  document.getElementById("profilepic").src = "https://i.kym-cdn.com/entries/icons/facebook/000/019/601/smilelaugh.jpg";
+}
+function sadavatar() {
+  document.getElementById("profilepic").src = "https://i.pinimg.com/236x/64/99/4e/64994e619df22acf0ee566799d72365a--sad-faces-emojis.jpg";
+}
+function angryavatar() {
+  document.getElementById("profilepic").src = "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/angry-face.png";
+}
+function skepavatar() {
+  document.getElementById("profilepic").src = "https://pyxis.nymag.com/v1/imgs/9fb/734/03eb4617b3f67e4491386a4408ff201019-thinky.rsquare.w700.jpg";
+}
+function encybrown() {
+  document.getElementById("profilepic").src = "https://www.penguin.com/static/packages/us/yreaders/books4boys/images/series_encyclopediabrown.png";
+}
+function encybrown() {
+  document.getElementById("profilepic").src = "";
+}
+    </script>
+    <p id="use">Anonymous</p>
+    <div class="dropdown">
+        <button class="dropbtn">Home</button>
+        <div class="dropdown-content">
+          <a href="profile.html">Profile</a>
+          <a href="projects.html">Projects</a>
+          <a href="friends.html">Friends</a>
+          <a href="terms.html">Terms and Privacy<a>
+        </div>
+      </div>
+      <div class="dropdown2">
+        <button class="dropbtn2">
+          <img id="triviaimg" src="https://cdn.lowgif.com/full/a9b6a51df7ff68ca-apple-spinning-pinwheel-gif-google-search-avis-pinterest.gif" height=25; width=25;></img>
+        </button>
+        <div class="dropdown-content2">
+          <a href="BSG1.html">Lawyer Land</a>
+          <a href="profile.html">12345</a>
+          <a href="friends.html">12345</a>
+          <a href="terms.html">12345<a>
+        </div>
+      </div>
+    <img src="https://cdn2.scratch.mit.edu/get_image/project/453106158_282x210.png" height=90; width=150;></img>
+    <button id="happy" onclick="fileopen()">
+    <img id="profilepic" src = "https://rlv.zcache.com/emoji_smiling_face_with_open_mouth_smiling_eyes_classic_round_sticker-re158cbd1331c46ab8b927dc99484b6ed_0ugmp_8byvr_704.jpg" width=90; height=80;></img>
+    </button>
+    <div id="file1">
+      <h4 id="words">Change Your Profile!<h4>
+      <button id="bclo" onclick="fileclose()">Close</button>
+      <button id="smilingavatar" onclick="smilingavatar()">
+        <img src = "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/smiling-face-with-open-mouth.png" width=80; height=80;></img>
+      </button>
+      <button id="funnyavatar" onclick="funnyavatar()">
+          <img src = "https://d2um6umu4gwssp.cloudfront.net/blog/wp-content/uploads/2017/09/apple_emoji.png" width=90; height=90></img>
+        </button>
+        <button id="laavatar" onclick="laavatar()">
+            <img src = "https://i.kym-cdn.com/entries/icons/facebook/000/019/601/smilelaugh.jpg" width=80; height=80></img>
+          </button>
+          <button id="sadavatar" onclick="sadavatar()">
+            <img src = "https://i.pinimg.com/236x/64/99/4e/64994e619df22acf0ee566799d72365a--sad-faces-emojis.jpg" width=80; height=80></img>
+          </button>
+          <button id="angryavatar" onclick="angryavatar()">
+            <img src = "https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/angry-face.png" width=80; height=80></img>
+          </button>
+          <button id="skepavatar" onclick="skepavatar()">
+            <img src = "https://pyxis.nymag.com/v1/imgs/9fb/734/03eb4617b3f67e4491386a4408ff201019-thinky.rsquare.w700.jpg" width=90; height=90;></img>
+          </button>
+          <button id="encybrown" onclick="encybrown()">
+            <img src = "https://www.penguin.com/static/packages/us/yreaders/books4boys/images/series_encyclopediabrown.png" width=85; height=90;></img>
+          </button>
+    </div>
+    <input type="text" placeholder="Search..">
+    <button class = "button1" onclick="ciphers()">
+      Ciphers</button>
+      <button class = "button2" onclick="forums()">
+          Forums
+      </button>
+    <button class = "button7" onclick="myFunction()">
+      <img src = "https://jonmgomes.com/wp-content/uploads/2020/03/Chat-Icon.gif" width=65; height=65;></img>
+    </button>
+    <button class = "notifbell" onclick="Bell()">
+      <img src ="https://eurekaleap.devstudio.com.ve/images/upl/animat-bell-color.gif" height=64; weight=64;></img>
+    </button>
+    <div class = header>.....</div>
+    <p> Welcome to Book Scavenger! This is a platform where users can bring to life their book that we all know and adore, book scavenger. You can solve ciphers and post them. Gather more books to get more genres and team up to solve harder ciphers. Create your own user once you get parent permission and collab with other friends that have been aproved from your parent. Tune in for the book of the day too! Solve the daily cipher to get the book and word of the day!</p>
+    <div class="Book">
+    <h1>Book of the Week!</h1>
+    <img src = "https://images-na.ssl-images-amazon.com/images/I/61GXoap2LJL.jpg" width=300; height=450;></img>
+    </div>
+    <div class="Word">
+    <h1>Word of the week!</h1>
+    <h2>FEROCIOUS</h2>
+    </div>
+    <button class = "wordofday" onclick="wordofday()">
+    <p>Learn more</p>
+    </button>
+    <button class = "settings" onclick="settings()">
+      <img src ="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/75efd4ea-7b0a-4bdf-83d9-9465ada27fa7/d59wxbv-b7092d3d-ffa6-480c-a69d-ffb00b9a86da.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNzVlZmQ0ZWEtN2IwYS00YmRmLTgzZDktOTQ2NWFkYTI3ZmE3XC9kNTl3eGJ2LWI3MDkyZDNkLWZmYTYtNDgwYy1hNjlkLWZmYjAwYjlhODZkYS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.C5-ezFB3WoL1GlyifVG2Em4M1Ughlrae1ZIEcefwXwQ" height=64; weight=64;></img>
+    </button>
+    
+    <div id="settings1">
+      Settings
+      <button id="settings123" onclick="closet()">Close</button>
+      <button id="turnmusic" onclick="turnmusic()">Music</button>
+      <button id="ha" onclick="ha()">Sounds</button>
+    </div>
+  
+  </body>
+</html>
+
