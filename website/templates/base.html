@@ -1,0 +1,41 @@
+<html>
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <style>
+        body {
+            background-color: cornflowerblue;
+            font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+            color: white;
+
+        }
+        nav{
+            color: white;
+            background-color: darkslategray;
+        }
+      </style>
+  </head>
+  <body>
+  <h1> Book Scavenger</h1>
+  <br>
+
+  <nav class="nav navbar-default">
+    <ul class="nav navbar-nav">
+        <li><a href="{{url_for('home_page')}}">Home</a></li>
+        <li><a href="{{url_for('about_page')}}">About</a></li>
+        <li><a href="#">Find Books</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
+    </ul>
+  </nav>
+
+  {% block title %}
+
+  {% endblock %}
+
+  </body>
+</html>
