@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}
-  <h2>Home Page</h2>
+  <h2>Welcome!</h2>
+  <br>
+  <h4>Ready to embark on a journey of a lifetime?</h4>
+  <form action="/find_books" method="post">
+    <a class="btn btn-primary" href="{{url_for('find_books')}}">Start Finding Books</a>
+  </form>
 {% endblock %}
 
